@@ -1,3 +1,4 @@
+# server.py code snippet
 from flask_sqlalchemy import SQLAlchemy
 
 class Server:

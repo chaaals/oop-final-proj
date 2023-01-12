@@ -1,3 +1,4 @@
+# app.py code snippet
 from flask import Flask, render_template, request, redirect
 from server import Server
 
