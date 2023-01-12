@@ -28,7 +28,6 @@ class Controller:
         db.session.add(todo)
         db.session.commit()
 
-
     def deleteTodo(self, _id):
         # apply logic here
         todo = Todos.query.filter_by(_id=_id).first()

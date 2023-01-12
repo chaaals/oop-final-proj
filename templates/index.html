@@ -4,26 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/styles.css">
     <title>Group 5 | OOP Final Project</title>
   </head>
   <body>
-    <h1>Home Page</h1>
     <header class="head">
       <div class="content-header">
-        <h2><a href="/" class="logo">My Todo</a></h2>
+        <h2><a href="/" class="logo">My To Do</a></h2>
         <ul>
           <li><a href="/" class="active">Go to list</a></li>
         </ul>
-        
+        </div>
     </header>
 
     <div class="container">
-      <div class="contant section-1">
-        <h2>Add your Todo</h2>
-        <hr />
+      <div class="content-section-1">
+        
+        <h2>Add your To do</h2>
+
         <form method="POST" action="/" class="form" name="form">
-          <div class="input-div">
-            <label for="title">Enter your Todo Title</label>
+            <div>
+                <hr class="hr-1"/>
+            </div>
+            <div class="input-div">
+            
+            <label for="title">Enter your To Do Title</label>
             <input
             type="text"
             name="title"
@@ -33,44 +38,49 @@
             />
           </div>
 
-          <div class="input-div">
-            <label for="description">Describe your todo here</label>
+          <div class="input-div-1">
+            <label for="description">Describe your To Do here</label>
             <input
               type="text"
               name="description"
               id="description"
+              class="input-text-1"
               placeholder="Enter a description"
             /> 
           </div>
-          <button class="add=btn" type="submit">Add</button>
+          
+          <button class="add-btn" type="submit">Add</button>
 
         </form> 
       </div>
-      <div class="contant section-2">
-        <h2>your Todos</h2>
-        <hr />
-        <div class="table=div">
+      
+      <div class="container-section-2">
+
+        <h2> Your Todos</h2>
+
+        <div class="table-div">
           <table id="table">
             <thead>
               <tr>
                 <th>Title</th>
                 <th class="description">Description</th>
-                <th>Created At</th>
-                <th>Actions</th>
+                <th>Remove</th>
               </tr>
+              
             </thead>
             <tbody>
-              {% for todo in todos%}
+              {% for todo in todos%} 
               <tr>
-                <td>{{todo.title}}</td>
-                <td>{{todo.desc}}</td>
+              <td>{{todo.title}}</td>
+                <td>{{todo.desc}}</td> 
                 <td class="button-row">
 
-                  <a href="/delete/{{todo._id}}" class="actions-btns delete">Delete</a>
+                  <a href="/delete/{{todo._id}}" class="actions-btns delete">Remove</a>
                 </td>
               </tr>
-              {%endfor%}
+              {% endfor %}
             </tbody>
+            <hr class="hr-2" /> 
       </div>
     </div>
   </body>
