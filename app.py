@@ -16,6 +16,9 @@ class Todos (db.Model):
         db.session.add(self)
         db.session.commit()
 
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
 class Controller:
     def fetchTodos(self):
         all_todos = Todos.query.all()
@@ -30,8 +33,7 @@ class Controller:
 
     def deleteTodo(self, _id):
         todo = Todos.query.filter_by(_id=_id).first()
-        db.session.delete(todo)
-        db.session.commit()
+        todo.delete()
 
 controller = Controller();
 

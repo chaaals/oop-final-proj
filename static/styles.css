@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;600&display=swap");
+
+* {
+  font-family: "Roboto Mono", monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ebebeb;
+}
+
+main {
+  width: 100vw;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  gap: 2rem;
+  margin-top: 8vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1rem;
+  width: 100%;
+}
+
+.head {
+  width: 100vw;
+  padding: 1rem 2rem;
+  background: #434343;
+}
+
+.content-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+
+.logo {
+  color: #ffffff;
+
+  font-style: normal;
+  font-size: 2rem;
+
+  text-decoration: none;
+}
+
+.active {
+  font-style: normal;
+  font-size: 1.5rem;
+
+  text-decoration: none;
+  color: #ffffff;
+}
+
+ul {
+  list-style: none;
+}
+
+.content-section-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+
+  color: #505050;
+  padding: 2rem;
+}
+
+.content-section-1 > h2,
+.container-section-2 > h2 {
+  align-self: center;
+}
+
+.input-div,
+.input-div-1 {
+  width: 100%;
+}
+
+.input-text {
+  width: 95%;
+  padding: 1rem;
+  background: #ffffff;
+  border: 1px solid #505050;
+  border-radius: 10px;
+
+  margin-top: 10px;
+}
+
+.input-text-1 {
+  width: 95%;
+  padding: 1rem;
+  background: #ffffff;
+  border: 1px solid #505050;
+  border-radius: 10px;
+
+  margin-top: 10px;
+}
+
+.add-btn {
+  font-size: 1.5rem;
+  padding: 0.5rem 3rem;
+  align-self: flex-end;
+
+  background: #2c4ef1;
+  border: none;
+
+  border-radius: 10px;
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+.section-2 {
+  align-self: flex-start;
+  align-items: flex-start;
+
+  width: 500px;
+  padding: 1.5rem;
+
+  min-height: 75vh;
+  gap: 2rem;
+
+  color: #434343;
+}
+
+.container-section-2 {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1rem;
+}
+
+.container-section-2 > h2 {
+  font-size: 24px;
+}
+
+.table {
+  width: 375px;
+}
+
+.todos-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 1.5rem;
+}
+
+.todo-item {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.todo-title {
+  font-size: 1rem;
+}
+
+.delete-btn {
+  font-size: 1rem;
+  padding: 0.5em 1em;
+
+  text-decoration: none;
+  background-color: orangered;
+
+  color: #fff;
+  border-radius: 0.5rem;
+
+  cursor: pointer;
+}

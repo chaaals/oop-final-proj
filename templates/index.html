@@ -4,74 +4,60 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/styles.css" />
     <title>Group 5 | OOP Final Project</title>
   </head>
   <body>
-    <h1>Home Page</h1>
-    <header class="head">
-      <div class="content-header">
-        <h2><a href="/" class="logo">My Todo</a></h2>
-        <ul>
-          <li><a href="/" class="active">Go to list</a></li>
-        </ul>
-        
-    </header>
+    <main>
+      <div class="container">
+        <div class="content-section-1">
+          <h2>Add your To do</h2>
 
-    <div class="container">
-      <div class="contant section-1">
-        <h2>Add your Todo</h2>
-        <hr />
-        <form method="POST" action="/" class="form" name="form">
-          <div class="input-div">
-            <label for="title">Enter your Todo Title</label>
-            <input
-            type="text"
-            name="title"
-            id="title"
-            class="input-text"
-            placeholder="Enter a title"
-            />
-          </div>
+          <form method="POST" action="/" class="form" name="form">
+            <div class="input-div">
+              <label for="title">Enter your To Do Title</label>
+              <input
+                type="text"
+                name="title"
+                id="title"
+                class="input-text"
+                placeholder="Enter a title"
+              />
+            </div>
 
-          <div class="input-div">
-            <label for="description">Describe your todo here</label>
-            <input
-              type="text"
-              name="description"
-              id="description"
-              placeholder="Enter a description"
-            /> 
-          </div>
-          <button class="add=btn" type="submit">Add</button>
+            <div class="input-div-1">
+              <label for="description">Describe your To Do here</label>
+              <input
+                type="text"
+                name="description"
+                id="description"
+                class="input-text-1"
+                placeholder="Enter a description"
+              />
+            </div>
 
-        </form> 
+            <button class="add-btn" type="submit">Add</button>
+          </form>
+        </div>
       </div>
-      <div class="contant section-2">
-        <h2>your Todos</h2>
-        <hr />
-        <div class="table=div">
-          <table id="table">
-            <thead>
-              <tr>
-                <th>Title</th>
-                <th class="description">Description</th>
-                <th>Created At</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
+
+      <div class="container section-2">
+        <div class="container-section-2">
+          <h2>Your Todos</h2>
+
+          <div class="table">
+            <div class="todos-container">
               {% for todo in todos%}
-              <tr>
-                <td>{{todo.title}}</td>
-                <td>{{todo.desc}}</td>
-                <td class="button-row">
-
-                  <a href="/delete/{{todo._id}}" class="actions-btns delete">Delete</a>
-                </td>
-              </tr>
-              {%endfor%}
-            </tbody>
+              <div class="todo-item">
+                <p class="todo-title"><strong>{{todo.title}}</strong></p>
+                <p class="todo-desc"><i>Description:</i> {{todo.desc}}</p>
+                <a href="/delete/{{todo._id}}" class="delete-btn">Remove</a>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </main>
   </body>
-</html> 
+</html>
