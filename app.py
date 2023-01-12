@@ -7,13 +7,18 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///todos.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
-# == Model ==
 class Todos (db.Model):
     _id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(200), nullable=False)
     desc = db.Column(db.String(500), nullable=False)
+    
+    def insert(self):
+        db.session.add(self)
+        db.session.commit()
 
-# == Controller ==
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
 class Controller:
     def fetchTodos(self):
         all_todos = Todos.query.all()
@@ -24,19 +29,14 @@ class Controller:
         desc = request.form['description']
 
         todo = Todos(title=title, desc=desc)
-
-        db.session.add(todo)
-        db.session.commit()
+        todo.insert()
 
     def deleteTodo(self, _id):
-        # apply logic here
         todo = Todos.query.filter_by(_id=_id).first()
-        db.session.delete(todo)
-        db.session.commit()
+        todo.delete()
 
 controller = Controller();
 
-# == Web app routes ==
 @app.route('/', methods=['POST', 'GET'])
 def home():
 
@@ -48,7 +48,6 @@ def home():
 
 @app.route('/delete/<int:_id>')
 def delete(_id):
-    # apply route logic here
     controller.deleteTodo(_id)
     return redirect('/')
 
