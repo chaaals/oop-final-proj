@@ -1,208 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;600&display=swap");
+
+* {
+  font-family: "Roboto Mono", monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-    background-color:#EBEBEB;
+  background-color: #ebebeb;
 }
+
+main {
+  width: 100vw;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  gap: 2rem;
+  margin-top: 8vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1rem;
+  width: 100%;
+}
+
 .head {
-
-    position: absolute;
-    width: 1920px;
-    height: 70px;
-    left: 0px;
-    top: 0px;
-    
-    background: #434343;
+  width: 100vw;
+  padding: 1rem 2rem;
+  background: #434343;
 }
 
-.hr-1  {
-
-width: 992px;
+.content-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-    .container {
-    box-sizing: border-box;
-    
-    position: absolute;
-    width: 996px;
-    height: 418px;
-    left: 155px;
-    top: 163px;
-    
-    background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
-   }
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
 
-.head .content-header .logo {
-    position: absolute;
-    width: 176px;
-    height: 48px;
-    left: 46px;
-    top: 8px;
-    color: #FFFFFF;
+  box-sizing: border-box;
 
-    font-style: normal;
-    font-size: 40px;
-    line-height: 48px;
-    text-decoration: none;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
 }
-.head .content-header .active {
-    position: absolute;
-    width: 221px;
-    height: 39px;
-    left: 293px;
-    top: 12px;
-    
 
-    font-style: normal;
-    font-size: 32px;
-    line-height: 39px;
-    text-decoration: none;
-    color: #FFFFFF;
+.logo {
+  color: #ffffff;
+
+  font-style: normal;
+  font-size: 2rem;
+
+  text-decoration: none;
+}
+
+.active {
+  font-style: normal;
+  font-size: 1.5rem;
+
+  text-decoration: none;
+  color: #ffffff;
 }
 
 ul {
-    list-style-type: none;
+  list-style: none;
 }
 
-.container .content-section-1 {
+.content-section-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 
-    position: absolute;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
 
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    text-align: center;
-    
-    color: #040404;
-
+  color: #505050;
+  padding: 2rem;
 }
 
-
-
-.container .content-section-1 .form .input-div {
-    position: absolute;
-    width: 200px;
-    height: 24px;
-    left: 46px;
-    top: 162px;
-    
-
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    
-    color: #7C7C7C;
-}
-.container .content-section-1 .form .input-div .input-text {
-    position: absolute;
-    width: 550px;
-    height: 51px;
-    left: 0px;
-    top: 33px;
-    padding: 1px;
-    background: #FFFFFF;
-    border: 1px solid #505050;
-    border-radius: 10px;
-    
+.content-section-1 > h2,
+.container-section-2 > h2 {
+  align-self: center;
 }
 
-
-.container .content-section-1 .form .input-div-1 {
-    position: absolute;
-    width: 209px;
-    height: 24px;
-    left: 46px;
-    top: 270px;
-    
-
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    
-    color: #7C7C7C;
+.input-div,
+.input-div-1 {
+  width: 100%;
 }
-.container .content-section-1 .form .input-div-1 .input-text-1 {
-    position: absolute;
-    width: 550px;
-    height: 51px;
-    left: 0px;
-    top: 31px;
-    background: #FFFFFF;
-border: 1px solid #505050;
-border-radius: 10px;
-    
+
+.input-text {
+  width: 95%;
+  padding: 1rem;
+  background: #ffffff;
+  border: 1px solid #505050;
+  border-radius: 10px;
+
+  margin-top: 10px;
+}
+
+.input-text-1 {
+  width: 95%;
+  padding: 1rem;
+  background: #ffffff;
+  border: 1px solid #505050;
+  border-radius: 10px;
+
+  margin-top: 10px;
 }
 
 .add-btn {
+  font-size: 1.5rem;
+  padding: 0.5rem 3rem;
+  align-self: flex-end;
 
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
+  background: #2c4ef1;
+  border: none;
 
-    position: absolute;
-    width: 173px;
-    height: 55px;
-    left: 716px;
-    top: 338px;
+  border-radius: 10px;
+  color: #ffffff;
 
-    
-    background: #2C4EF1;
-    border: 1px solid #2C4EF1;
-    border-radius: 10px;
-    color: #FFFFFF;
-
+  cursor: pointer;
 }
 
-.container-section-2{
+.section-2 {
+  align-self: flex-start;
+  align-items: flex-start;
 
-    box-sizing: border-box;
-    position: absolute;
-    width: 524px;
-    height: 691px;
-    left: 1071px;
-    top: 0;
+  width: 500px;
+  padding: 1.5rem;
 
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    
-    color: #040404;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-}
-.container-section-2 h2 {
-    margin: 10px;
-    text-align: center;
-}
-.container-section-2 .table-div {
+  min-height: 75vh;
+  gap: 2rem;
 
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    padding: 0px;
-    text-align: center;
-    color: #505050;
-}
-.hr-2 {
-    width: 520px;
+  color: #434343;
 }
 
-th {
-    padding: 30px;
+.container-section-2 {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1rem;
 }
 
-.actions-btns-delete {
-    position: absolute;
-    width: 98px;
-    height: 38px;
-    left: 385px;
-    top: 170px;   
-    background: #362D64;
-    border: 1px solid #362D64;
-    border-radius: 10px;
-    color: #FFFFFF;
-} 
+.container-section-2 > h2 {
+  font-size: 24px;
+}
+
+.table {
+  width: 375px;
+}
+
+.todos-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 1.5rem;
+}
+
+.todo-item {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.todo-title {
+  font-size: 1rem;
+}
+
+.delete-btn {
+  font-size: 1rem;
+  padding: 0.5em 1em;
+
+  text-decoration: none;
+  background-color: orangered;
+
+  color: #fff;
+  border-radius: 0.5rem;
+
+  cursor: pointer;
+}
